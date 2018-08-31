@@ -1,6 +1,6 @@
 # node-systray
 
-> SysTray library for nodejs using [systray-portable](https://github.com/zaaack/systray-portable) (a portable version of [the go systray library](https://github.com/getlantern/systray)).
+> SysTray library for nodejs using [ssbc/systrayhelper](https://github.com/ssbc/systrayhelper) (a portable version of [the go systray library](https://github.com/getlantern/systray)).
 
 
 ## Install
