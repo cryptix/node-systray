@@ -1,5 +1,5 @@
-import * as assert from 'assert'
-import SysTray from '../src/index'
+const assert = require('assert')
+const SysTray = require('../index')
 
 const menu = require('./menu.json')
 
