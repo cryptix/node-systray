@@ -1,5 +1,5 @@
-import * as child from 'child_process'
-import * as EventEmitter from 'events'
+import child from 'child_process'
+import EventEmitter from 'events'
 
 
 // missing TS definitions
