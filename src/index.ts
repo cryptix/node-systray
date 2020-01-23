@@ -87,14 +87,12 @@ export default class SysTray extends EventEmitter {
 
     this._helperPath = whereis(helperName)
     if (this._helperPath === '') {
-      console.error('could not locate helper binary:', helperName)
-      process.exit(1)
+      throw new Error(`could not locate helper binary: ${helperName}`);
     }
 
     this._helper = child.spawn(this._helperPath, [], {
       windowsHide: true
     })
-    this._helper.stderr.pipe(process.stderr)
 
     // from helper
     pull(
