@@ -6,14 +6,13 @@
   "typings": "lib/index.d.ts",
   "scripts": {
     "prepublishOnly": "npm run build",
-    "preinstall": "node ./scripts/fetch-prebuilt-helper.js",
-    "build": "npm run build:lib && npm run doc",
-    "build:lib": "tsc --outDir lib",
+    "postinstall": "node ./scripts/fetch-prebuilt-helper.js",
+    "build": "tsc --outDir lib",
     "clean:unix": "del ./lib/**",
     "clean:windows": "rd /q /s .\\lib",
     "lint": "tslint ./src/** -p ./tsconfig.json",
     "test": "cross-env DEBUG=systray* mocha -r ts-node/register ./test/**/*.test.ts",
-    "doc": "typedoc --theme minimal --out ./docs ./src && touch ./docs/.nojekyll",
+    "build:doc": "typedoc --theme minimal --out ./docs ./src && touch ./docs/.nojekyll",
     "cover": "cross-env NODE_ENV=development nyc ava"
   },
   "bin": {
